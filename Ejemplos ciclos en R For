@@ -1,0 +1,22 @@
+
+##Obtener la probabilidad que caiga un punto dentro de un circulo circunscrito en un cuadrado de lado 1 u
+#y estimar el número pi mediante simulaciones
+n=10000
+for(i in n){
+  x=runif(n,0,1)
+  y=runif(n,0,1)
+  h=(sqrt((x-0.5)^2+(y-0.5)^2))
+  m=h<=0.5
+  k=sum(m)
+  area_cir=(k/n)
+  pi=area_cir*4*1
+  return(cat("Probabilidad que caiga un punto dentro del circulo: ",area_cir,"pi est.:", pi))}
+  
+###Reemplazando multiplo de 3 y 5  con palabras
+int<-seq(1:100)
+for (i in int){
+  if (i%%3==0){
+    i="Multiplo de 3"}
+  else if (i%%5==0){
+    i="Multiplo de 5"}
+  print(i)}
